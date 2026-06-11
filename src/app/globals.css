@@ -1,0 +1,104 @@
+/* Tailwind's default styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-family: 'Arial', Helvetica, sans-serif;
+  --font-size: medium; /* Default to 'medium' */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ededed;
+    --foreground: #0a0a0a;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-family);
+  font-size: var(--font-size); /* This will be a named font size */
+}
+
+/* Font Size Mapping */
+body[style*="font-size: small"] {
+  font-size: 0.875rem; /* Small size */
+}
+
+body[style*="font-size: medium"] {
+  font-size: 1rem; /* Default size (medium) */
+}
+
+body[style*="font-size: large"] {
+  font-size: 1.25rem; /* Large size */
+}
+
+/* Compact Mode Styles */
+.compact-layout .bg-white,
+.compact-layout .bg-gray-800 {
+  padding: 8px; /* Reduce padding for compact mode */
+}
+
+.compact-layout .p-6 {
+  padding: 8px; /* Reduce padding for cards */
+}
+
+.compact-layout .text-4xl {
+  font-size: 1.5rem; /* Smaller font size for large text */
+}
+
+.compact-layout .text-2xl {
+  font-size: 1.25rem; /* Smaller font size for subheadings */
+}
+
+.compact-layout .grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr); /* Stack items */
+}
+
+.compact-layout .grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr); /* Two items per row */
+}
+
+.compact-layout .grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+}
+
+.compact-layout .h-32 {
+  height: 8rem; /* Smaller height for the point cards */
+}
+
+.compact-layout .text-md {
+  font-size: 0.875rem; /* Smaller font for medium text */
+}
+
+.compact-layout .mb-6 {
+  margin-bottom: 0.5rem; /* Reduce space between items */
+}
+
+.compact-layout .mb-8 {
+  margin-bottom: 0.75rem; /* Reduce space between sections */
+}
+
+.compact-layout .pt-24 {
+  padding-top: 2rem; /* Reduce top padding */
+}
+
+.compact-layout .pb-4 {
+  padding-bottom: 1rem; /* Reduce bottom padding */
+}
+
+.compact-layout .h-10 {
+  height: 2.5rem; /* Smaller profile picture size */
+}
+
+.compact-layout .w-10 {
+  width: 2.5rem; /* Smaller profile picture size */
+}
+
+.compact-layout .w-full {
+  width: 100%; /* Ensures full width in compact mode */
+}
